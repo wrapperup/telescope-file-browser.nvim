@@ -114,7 +114,7 @@ local hijack_netrw = function()
         end
 
         -- prevents reopening of file-browser if exiting without selecting a file
-        if netrw_bufname == bufname then
+        if netrw_bufname == nil or netrw_bufname == bufname then
           netrw_bufname = nil
           return
         else
